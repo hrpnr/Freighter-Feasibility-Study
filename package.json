@@ -1,0 +1,15 @@
+{
+    "name": "ourfreighter",
+    "version": "1.0.0",
+    "description": "OurFreighter - Freighter Profitability Planner",
+    "scripts": {
+        "start": "concurrently --names \"BACK,REACT,ELEC\" --prefix-colors \"cyan,magenta,yellow\" \"npm run dev --prefix backend\" \"cross-env BROWSER=none npm start --prefix frontend\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=development npx electron frontend\"",
+        "start:backend": "npm run dev --prefix backend",
+        "start:frontend": "npm run electron-dev --prefix frontend"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "wait-on": "^7.2.0"
+    }
+}

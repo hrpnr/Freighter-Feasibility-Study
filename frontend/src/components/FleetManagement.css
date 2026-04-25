@@ -1,0 +1,186 @@
+.fleet-management {
+  margin-top: 1rem;
+}
+
+.fleet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.fleet-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.aircraft-card {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.aircraft-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.aircraft-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.aircraft-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.aircraft-type {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--primary-color);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.aircraft-details {
+  margin: 1.5rem 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.detail-row span {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.aircraft-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .fleet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal Enhancements */
+.modal-content {
+  max-width: 800px !important;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-divider {
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.section-hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.baselines-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.baseline-row {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.baseline-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 0.75rem;
+}
+
+.baseline-inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.mini-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mini-group label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.mini-group input {
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.85rem !important;
+}
+
+@media (max-width: 600px) {
+  .baseline-inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}

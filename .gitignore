@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment
+.env
+backend/.env
+frontend/.env
+*.env
+ourfreighterrules.md
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI & Privacy (Do not leak your working history!)
+.agents/
+brain/
+scratch/
+
+# Backend Data
+backend/uploads/
+
+# Build/Dist
+build/
+dist/
+frontend/build/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
